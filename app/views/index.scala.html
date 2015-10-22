@@ -1,0 +1,87 @@
+@(instr : List[Instrumento], estilo : List[Estilo], estiloNG : List[EstiloNO])
+
+<html lang="">
+    <head>
+        <title>Hibernate Example</title>
+        <meta charset="UTF-8">
+        <meta name=description content="">
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap CSS -->
+        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    	<link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/violao.jpg")">
+    </head>
+    <body>
+    <div class="content">
+    
+    
+    <section id="cadastro">
+    	
+
+		<div class="col-sm-4">
+        <h2>Cria um novo Anúncio</h2>
+
+        <form action="@routes.Application.novoAnuncio()" method="post"> 
+        	<label for="codigo"> Código </label>
+        	<input type="text" name="codigo" id="inputCodigo" placeholder="Código de segurança" class="form-control" required="required">
+        
+            <label for="titulo"> Título: </label>
+            <input type="text" name="titulo" id="inputNome" placeholder="Título do seu anúncio" class="form-control"required="required">
+            
+            <label for="descricao"> Descrição: </label>
+            <input type="text" name="descricao" id="inputDescricao" placeholder="Descreva o que você quer anunciar" class="form-control" required="required">
+            
+            <label for="cidade"> Cidade: </label>
+            <input type="text" name="cidade" id="inputCidade" placeholder="Cidade onde mora" class="form-control" required="required">
+            
+            <label for="bairro"> Bairro: </label>
+            <input type="text" name="bairro" id="inputBairro" placeholder="Bairro onde mora" class="form-control" required="required">
+            
+            <label for="email"> E-mail: </label>
+            <input type="text" name="email" id="inputEmail" placeholder="Seu email" class="form-control" required="required">
+            
+            <label for="facebook"> Facebook: </label>
+            <input type="text" name="facebook" id="inputFace" placeholder="Seu link do facebook" class="form-control" required="required">
+            
+            <label for="banda"> Deseja formar banda? </label>
+            <input type="text" name="banda" id="inputBanda" placeholder="Sim ou Não" class="form-control" required="required">
+            
+            <label for="tocar"> Deseja tocar ocasionalmente? </label>
+            <input type="text" name="tocar" id="inputTocar" placeholder="Sim ou Não" class="form-control" required="required">
+            
+            <label for="instrumentos"> Instrumento: </label>
+            <select name="instrumentos" id="inputAutores" class="form-control multiselect" multiple="multiple" required="required">
+                     @for(instrument <- instr) {
+                     <option value="@instrument.getId()">@instrument.getNome()</option>
+               		}
+             </select>
+             
+             <label for="estilosG"> Estilo que gosta: </label>
+            <select name="estilosG" id="inputEstilosG" class="form-control multiselect" multiple="multiple">
+                     @for(est <- estilo) {
+                     <option value="@est.getId()">@est.getNome()</option>
+               		}
+             </select>
+             
+              <label for="estilosNG"> Estilo que não gosta: </label>
+            <select name="estilosNG" id="inputEstilosNG" class="form-control multiselect" multiple="multiple">
+                     @for(est <- estilo) {
+                     <option value="@est.getId()">@est.getNome()</option>
+               		}
+             </select>
+            
+            <input type="submit" class="btn btn-primary" value="Create">
+        </form>
+
+        </div>
+        </section>
+    </div>
+
+        <!-- jQuery -->
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <!-- Bootstrap JavaScript -->
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    </body>
+</html>
+
+    
