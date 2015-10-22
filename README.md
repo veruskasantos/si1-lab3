@@ -1,8 +1,8 @@
-#Aplicação para encontrar parceiros musicais para formar bandas ou tocar ocasionalmente.
+﻿#Aplicação para encontrar parceiros musicais para formar bandas ou tocar ocasionalmente.
 
-@version 0.1 2015
+@version 0.2 2015
 
-Lab02 de SI1, baseado no exemplo da disciplina.
+Lab03 de SI1, baseado no lab2.
 
 
 
