@@ -1,6 +1,6 @@
 // @SOURCE:C:/Users/Veruska/workspace/si1-lab3/conf/routes
 // @HASH:717e096640adba4e91b9a42fc9169afac85469be
-// @DATE:Mon Oct 26 23:57:12 BRST 2015
+// @DATE:Tue Oct 27 00:29:53 BRST 2015
 
 
 import play.core._

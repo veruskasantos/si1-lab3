@@ -57,7 +57,6 @@ public class Application extends Controller {
 	@Transactional
 	public static Result anuncios() {
 		
-		//List<Anuncio> result = dao.findAllByClass(Anuncio.class);
 		List<Instrumento> result1 = dao.findAllByClass(Instrumento.class);
 		List<Estilo> result2 = dao.findAllByClass(Estilo.class);
 		List<EstiloNO> result3 = dao.findAllByClass(EstiloNO.class);
@@ -119,7 +118,6 @@ public class Application extends Controller {
 		return instrumentos;
 	}
 	
-	
 	@Transactional
 	private static List<Estilo> getEstilosSelecionados(){
 		
@@ -140,7 +138,6 @@ public class Application extends Controller {
 		}
 		return estilos;
 	}
-	
 	
 	@Transactional
 	private static List<EstiloNO> getEstilosNGSelecionados(){
@@ -188,19 +185,18 @@ public class Application extends Controller {
 		return redirect(routes.Application.index());
 	}
 	
-	//COLOCAR IF ELSE
 	@Transactional
 	public static Result retornaBusca(String palavra, Long idInstrumento,
 			Long idEstilo, String interesse){
 		
 		List<Anuncio> anuncios = dao.findAllByClass(Anuncio.class);
 		List<Anuncio> anunciosSelect = new ArrayList<Anuncio>();
-		boolean formarBanda;
-		List<Instrumento> instrumentos =  new ArrayList<Instrumento>();
-		List<Estilo> estilos =  new ArrayList<Estilo>();
+		List<Instrumento> instrumentos =  dao.findAllByClass(Instrumento.class);
+		List<Estilo> estilos =  dao.findAllByClass(Estilo.class);
 		List<EstiloNO> estilosNG = dao.findAllByClass(EstiloNO.class);
 		Instrumento instrumento = dao.findByEntityId(Instrumento.class, idInstrumento);
 		Estilo estilo = dao.findByEntityId(Estilo.class, idEstilo);
+		boolean formarBanda;
 		
 		if(interesse.contains("banda")){
 			formarBanda = true;
@@ -234,15 +230,17 @@ public class Application extends Controller {
 				
 				if(estilo != null){
 					//verifica quais anuncios tem o estilo buscado
-					if(anuncios.get(i).getEstilosGosta().contains(estilo)
+					if(anuncios.get(i).getEstilosGosta()!= null && 
+							anuncios.get(i).getEstilosGosta().contains(estilo)
 							&& !anunciosSelect.contains(anuncios.get(i))){
 						anunciosSelect.add(anuncios.get(i));
 					}
 				}
 		
 			}
-			return redirect(routes.Application.index());
-		//return ok(views.html.novo.render(anunciosSelect, instrumentos, estilos, estilosNG, satisfacao));
+			
+			//atualiza a página inicial
+		return ok(views.html.novo.render(anunciosSelect, instrumentos, estilos, estilosNG, satisfacao));
 	}
 
 }
