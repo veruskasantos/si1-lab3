@@ -86,7 +86,7 @@ Seq[Any](format.raw/*1.44*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Mon Oct 26 22:18:30 BRST 2015
+                    DATE: Mon Oct 26 23:52:59 BRST 2015
                     SOURCE: C:/Users/Veruska/workspace/si1-lab3/app/views/removeAnuncio.scala.html
                     HASH: 2a4af2ceb7769c17014cb341d998877e0a6fdc19
                     MATRIX: 794->1|930->43|1365->442|1380->448|1436->482|1534->544|1549->550|1602->581|1664->607|1679->613|1746->658|2441->1317|2481->1341|2521->1343|2596->1382|2612->1389|2642->1397|2681->1400|2697->1407|2731->1419|2792->1448

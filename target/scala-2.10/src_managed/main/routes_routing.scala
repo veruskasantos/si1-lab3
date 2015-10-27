@@ -1,6 +1,6 @@
 // @SOURCE:C:/Users/Veruska/workspace/si1-lab3/conf/routes
-// @HASH:ce532c7ed952a860b149a88c753b9a3ccc456c1d
-// @DATE:Mon Oct 26 22:18:28 BRST 2015
+// @HASH:717e096640adba4e91b9a42fc9169afac85469be
+// @DATE:Mon Oct 26 23:57:12 BRST 2015
 
 
 import play.core._
@@ -59,7 +59,7 @@ private[this] lazy val controllers_Application_redirecionaRemoveAnuncio6 = Route
 // @LINE:17
 private[this] lazy val controllers_Application_retornaBusca7 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("books/retornaBusca"))))
         
-def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """index""","""controllers.Application.anuncios()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """books""","""controllers.Application.anuncios()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """books""","""controllers.Application.novoAnuncio()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """books/removeAnuncio""","""controllers.Application.removeAnuncio(anuncio:Long, codigo:String, satisfeito:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """books/redirecionaRemoveAnuncio""","""controllers.Application.redirecionaRemoveAnuncio()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """books/retornaBusca""","""controllers.Application.retornaBusca(palavra:String, interesse:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """index""","""controllers.Application.anuncios()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """books""","""controllers.Application.anuncios()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """books""","""controllers.Application.novoAnuncio()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """books/removeAnuncio""","""controllers.Application.removeAnuncio(anuncio:Long, codigo:String, satisfeito:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """books/redirecionaRemoveAnuncio""","""controllers.Application.redirecionaRemoveAnuncio()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """books/retornaBusca""","""controllers.Application.retornaBusca(palavra:String, instrumentos:Long, estilosG:Long, interesse:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]] 
 }}
@@ -125,8 +125,8 @@ case controllers_Application_redirecionaRemoveAnuncio6(params) => {
 
 // @LINE:17
 case controllers_Application_retornaBusca7(params) => {
-   call(params.fromQuery[String]("palavra", None), params.fromQuery[String]("interesse", None)) { (palavra, interesse) =>
-        invokeHandler(controllers.Application.retornaBusca(palavra, interesse), HandlerDef(this, "controllers.Application", "retornaBusca", Seq(classOf[String], classOf[String]),"GET", """""", Routes.prefix + """books/retornaBusca"""))
+   call(params.fromQuery[String]("palavra", None), params.fromQuery[Long]("instrumentos", None), params.fromQuery[Long]("estilosG", None), params.fromQuery[String]("interesse", None)) { (palavra, instrumentos, estilosG, interesse) =>
+        invokeHandler(controllers.Application.retornaBusca(palavra, instrumentos, estilosG, interesse), HandlerDef(this, "controllers.Application", "retornaBusca", Seq(classOf[String], classOf[Long], classOf[Long], classOf[String]),"GET", """""", Routes.prefix + """books/retornaBusca"""))
    }
 }
         

@@ -187,23 +187,25 @@ public class Application extends Controller {
 		
 		return redirect(routes.Application.index());
 	}
-	//TROCAR O TIPO PARA LONG id
+	
+	//COLOCAR IF ELSE
 	@Transactional
-	public static Result retornaBusca(String palavra, String interesse){
+	public static Result retornaBusca(String palavra, Long idInstrumento,
+			Long idEstilo, String interesse){
 		
 		List<Anuncio> anuncios = dao.findAllByClass(Anuncio.class);
 		List<Anuncio> anunciosSelect = new ArrayList<Anuncio>();
-		boolean formarBanda, tocar;
-		List<Instrumento> instrumento = getInstrumentosSelecionados();
-		List<Estilo> estilos = getEstilosSelecionados();
+		boolean formarBanda;
+		List<Instrumento> instrumentos =  new ArrayList<Instrumento>();
+		List<Estilo> estilos =  new ArrayList<Estilo>();
 		List<EstiloNO> estilosNG = dao.findAllByClass(EstiloNO.class);
+		Instrumento instrumento = dao.findByEntityId(Instrumento.class, idInstrumento);
+		Estilo estilo = dao.findByEntityId(Estilo.class, idEstilo);
 		
 		if(interesse.contains("banda")){
 			formarBanda = true;
-			tocar = false;
 		}else{
 			formarBanda = false;
-			tocar = true;
 		}
 		
 			for (int i = 0; i < anuncios.size(); i++) {
@@ -222,25 +224,25 @@ public class Application extends Controller {
 					}
 				}
 				
-				for (int j = 0; j < instrumento.size(); j++) {
+				if(instrumento != null){
 					//verifica quais anuncios tem o instrumento buscado
-					if(anuncios.get(i).getInstrumentos().contains(instrumento.get(j))
+					if(anuncios.get(i).getInstrumentos().contains(instrumento)
 							&& !anunciosSelect.contains(anuncios.get(i))){
 						anunciosSelect.add(anuncios.get(i));
 					}
 				}
 				
-				for (int k = 0; k < estilos.size(); k++) {
+				if(estilo != null){
 					//verifica quais anuncios tem o estilo buscado
-					if(anuncios.get(i).getEstilosGosta().contains(estilos.get(k))
+					if(anuncios.get(i).getEstilosGosta().contains(estilo)
 							&& !anunciosSelect.contains(anuncios.get(i))){
 						anunciosSelect.add(anuncios.get(i));
 					}
 				}
 		
 			}
-		
-		return ok(views.html.novo.render(anunciosSelect, instrumento, estilos, estilosNG, satisfacao));
+			return redirect(routes.Application.index());
+		//return ok(views.html.novo.render(anunciosSelect, instrumentos, estilos, estilosNG, satisfacao));
 	}
 
 }

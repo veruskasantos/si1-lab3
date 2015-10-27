@@ -53,17 +53,17 @@ public class ApplicationControllerTest extends AbstractTest {
 	
 	@Test
 	public void callNewBook() {
-		// Mapa com os dados do formulario para criação do livro
+		// Mapa com os dados do formulario para criação do anuncio
 		Map<String, String> formData = new HashMap<String, String>();
-		formData.put("titulo", "Banda");
+		formData.put("Anuncio", "Banda");
 		
-		// realiza a chamada ao método newBook() do Application com o
+		// realiza a chamada ao método novoAnuncio() do Application com o
 		// formulário.
 		result = callAction(
-				controllers.routes.ref.Application.newBook(), fakeRequest()
+				controllers.routes.ref.Application.novoAnuncio(), fakeRequest()
 						.withFormUrlEncodedBody(formData));
 		
-		// ao chamar o método newBook do Application, ele adiciona o livro e
+		// ao chamar o método novoAnuncio do Application, ele adiciona o anuncio e
 		// redireciona para a url '/books'
 		assertThat(status(result)).isEqualTo(Http.Status.SEE_OTHER);
 		assertThat(redirectLocation(result)).isEqualTo("/books");
@@ -73,13 +73,13 @@ public class ApplicationControllerTest extends AbstractTest {
         GenericDAO dao = new GenericDAO();
 		List<Anuncio> anuncios = dao.findAllByClass(Anuncio.class);
 		assertThat(anuncios.size()).isEqualTo(1);
-        assertThat(anuncios.get(0).getTitulo()).isEqualTo("Banda");
+        assertThat(anuncios.get(0).getTitulo()).isEqualTo("Anuncio");
 		List<Anuncio> result2 = dao.findByAttributeName("Anuncio", 
 				"titulo", "Banda");	
 		assertThat(result2.size()).isEqualTo(1);
 		
-		// verifica o html gerado pela url '/books' que é chamada dentro do newBook
-		result = callAction(controllers.routes.ref.Application.books(),
+		// verifica o html gerado pela url '/books'
+		result = callAction(controllers.routes.ref.Application.anuncios(),
 				fakeRequest());
 		assertThat(status(result)).isEqualTo(Http.Status.OK);
 		assertThat(contentAsString(result)).contains("1 anúncio(s)");

@@ -1,6 +1,6 @@
 // @SOURCE:C:/Users/Veruska/workspace/si1-lab3/conf/routes
-// @HASH:ce532c7ed952a860b149a88c753b9a3ccc456c1d
-// @DATE:Mon Oct 26 22:18:28 BRST 2015
+// @HASH:717e096640adba4e91b9a42fc9169afac85469be
+// @DATE:Mon Oct 26 23:57:12 BRST 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -46,12 +46,6 @@ def at(file:String): Call = {
 class ReverseApplication {
     
 
-// @LINE:17
-def retornaBusca(palavra:String, interesse:String): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "books/retornaBusca" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("palavra", palavra)), Some(implicitly[QueryStringBindable[String]].unbind("interesse", interesse)))))
-}
-                                                
-
 // @LINE:16
 def redirecionaRemoveAnuncio(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "books/redirecionaRemoveAnuncio")
@@ -87,6 +81,12 @@ def removeAnuncio(anuncio:Long, codigo:String, satisfeito:String): Call = {
 // @LINE:6
 def index(): Call = {
    Call("GET", _prefix)
+}
+                                                
+
+// @LINE:17
+def retornaBusca(palavra:String, instrumentos:Long, estilosG:Long, interesse:String): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "books/retornaBusca" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("palavra", palavra)), Some(implicitly[QueryStringBindable[Long]].unbind("instrumentos", instrumentos)), Some(implicitly[QueryStringBindable[Long]].unbind("estilosG", estilosG)), Some(implicitly[QueryStringBindable[String]].unbind("interesse", interesse)))))
 }
                                                 
     
@@ -133,17 +133,6 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 // @LINE:6
 class ReverseApplication {
     
-
-// @LINE:17
-def retornaBusca : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Application.retornaBusca",
-   """
-      function(palavra,interesse) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "books/retornaBusca" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("palavra", palavra), (""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("interesse", interesse)])})
-      }
-   """
-)
-                        
 
 // @LINE:16
 def redirecionaRemoveAnuncio : JavascriptReverseRoute = JavascriptReverseRoute(
@@ -205,6 +194,17 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
    """
 )
                         
+
+// @LINE:17
+def retornaBusca : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.retornaBusca",
+   """
+      function(palavra,instrumentos,estilosG,interesse) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "books/retornaBusca" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("palavra", palavra), (""" + implicitly[QueryStringBindable[Long]].javascriptUnbind + """)("instrumentos", instrumentos), (""" + implicitly[QueryStringBindable[Long]].javascriptUnbind + """)("estilosG", estilosG), (""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("interesse", interesse)])})
+      }
+   """
+)
+                        
     
 }
               
@@ -246,12 +246,6 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 class ReverseApplication {
     
 
-// @LINE:17
-def retornaBusca(palavra:String, interesse:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Application.retornaBusca(palavra, interesse), HandlerDef(this, "controllers.Application", "retornaBusca", Seq(classOf[String], classOf[String]), "GET", """""", _prefix + """books/retornaBusca""")
-)
-                      
-
 // @LINE:16
 def redirecionaRemoveAnuncio(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.redirecionaRemoveAnuncio(), HandlerDef(this, "controllers.Application", "redirecionaRemoveAnuncio", Seq(), "GET", """""", _prefix + """books/redirecionaRemoveAnuncio""")
@@ -279,6 +273,12 @@ def removeAnuncio(anuncio:Long, codigo:String, satisfeito:String): play.api.mvc.
 // @LINE:6
 def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.index(), HandlerDef(this, "controllers.Application", "index", Seq(), "GET", """ Home page""", _prefix + """""")
+)
+                      
+
+// @LINE:17
+def retornaBusca(palavra:String, instrumentos:Long, estilosG:Long, interesse:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.retornaBusca(palavra, instrumentos, estilosG, interesse), HandlerDef(this, "controllers.Application", "retornaBusca", Seq(classOf[String], classOf[Long], classOf[Long], classOf[String]), "GET", """""", _prefix + """books/retornaBusca""")
 )
                       
     

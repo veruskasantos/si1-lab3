@@ -58,7 +58,7 @@ public class IndexViewTest {
 		instrumentos.add(instrumento1);
 		estilos.add(estilo1);
 		estilosNO.add(estiloN);
-		int contador = 0;
+		long contador = 0L;
 
 		// guarda o html resultante da renderização do index.scala.html
 		// com a lista de anuncios e o formulario
@@ -87,7 +87,7 @@ public class IndexViewTest {
 		estilos.add(estilo1);
 		estilosNO.add(estiloN);
 		
-		Content html = index.render(anuncios, instrumentos, estilos, estilosNO);
+		Content html = index.render(instrumentos, estilos, estilosNO);
 		assertThat(contentType(html)).isEqualTo("text/html");
 	}
 
