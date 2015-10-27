@@ -163,6 +163,12 @@ public class Application extends Controller {
 		return estilos;
 	}
 	
+	@Transactional
+	public static Result redirecionaRemoveAnuncio(){
+		List<Anuncio> result = dao.findAllByClass(Anuncio.class);
+		
+		return ok(views.html.removeAnuncio.render(result, satisfacao));
+	}
 	
 	@Transactional
 	public static Result removeAnuncio(Long id, String nome, String satisfeito){
@@ -180,6 +186,61 @@ public class Application extends Controller {
 		}
 		
 		return redirect(routes.Application.index());
+	}
+	//TROCAR O TIPO PARA LONG id
+	@Transactional
+	public static Result retornaBusca(String palavra, String interesse){
+		
+		List<Anuncio> anuncios = dao.findAllByClass(Anuncio.class);
+		List<Anuncio> anunciosSelect = new ArrayList<Anuncio>();
+		boolean formarBanda, tocar;
+		List<Instrumento> instrumento = getInstrumentosSelecionados();
+		List<Estilo> estilos = getEstilosSelecionados();
+		List<EstiloNO> estilosNG = dao.findAllByClass(EstiloNO.class);
+		
+		if(interesse.contains("banda")){
+			formarBanda = true;
+			tocar = false;
+		}else{
+			formarBanda = false;
+			tocar = true;
+		}
+		
+			for (int i = 0; i < anuncios.size(); i++) {
+				
+				if(formarBanda){
+					//verifica quais anuncios tem por interesse formar banda
+					if(anuncios.get(i).getBanda().equalsIgnoreCase("sim")
+							&& !anunciosSelect.contains(anuncios.get(i))){
+						anunciosSelect.add(anuncios.get(i));
+					}
+				}else{
+					//verifica quais anuncios tem por interesse tocar ocasionalmente
+					if(!anuncios.get(i).getBanda().equalsIgnoreCase("sim")
+							&& !anunciosSelect.contains(anuncios.get(i))){
+						anunciosSelect.add(anuncios.get(i));
+					}
+				}
+				
+				for (int j = 0; j < instrumento.size(); j++) {
+					//verifica quais anuncios tem o instrumento buscado
+					if(anuncios.get(i).getInstrumentos().contains(instrumento.get(j))
+							&& !anunciosSelect.contains(anuncios.get(i))){
+						anunciosSelect.add(anuncios.get(i));
+					}
+				}
+				
+				for (int k = 0; k < estilos.size(); k++) {
+					//verifica quais anuncios tem o estilo buscado
+					if(anuncios.get(i).getEstilosGosta().contains(estilos.get(k))
+							&& !anunciosSelect.contains(anuncios.get(i))){
+						anunciosSelect.add(anuncios.get(i));
+					}
+				}
+		
+			}
+		
+		return ok(views.html.novo.render(anunciosSelect, instrumento, estilos, estilosNG, satisfacao));
 	}
 
 }

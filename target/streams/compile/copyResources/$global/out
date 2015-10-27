@@ -1,5 +1,5 @@
 [0m[[0mdebug[0m] [0mCopy resource mappings: [0m
-[0m[[0mdebug[0m] [0m	(C:\Users\Veruska\si1-lab2\conf\application.conf,C:\Users\Veruska\si1-lab2\target\scala-2.10\classes\application.conf)[0m
-[0m[[0mdebug[0m] [0m	(C:\Users\Veruska\si1-lab2\conf\META-INF,C:\Users\Veruska\si1-lab2\target\scala-2.10\classes\META-INF)[0m
-[0m[[0mdebug[0m] [0m	(C:\Users\Veruska\si1-lab2\conf\routes,C:\Users\Veruska\si1-lab2\target\scala-2.10\classes\routes)[0m
-[0m[[0mdebug[0m] [0m	(C:\Users\Veruska\si1-lab2\conf\META-INF\persistence.xml,C:\Users\Veruska\si1-lab2\target\scala-2.10\classes\META-INF\persistence.xml)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\Veruska\workspace\si1-lab3\conf\application.conf,C:\Users\Veruska\workspace\si1-lab3\target\scala-2.10\classes\application.conf)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\Veruska\workspace\si1-lab3\conf\META-INF,C:\Users\Veruska\workspace\si1-lab3\target\scala-2.10\classes\META-INF)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\Veruska\workspace\si1-lab3\conf\routes,C:\Users\Veruska\workspace\si1-lab3\target\scala-2.10\classes\routes)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\Veruska\workspace\si1-lab3\conf\META-INF\persistence.xml,C:\Users\Veruska\workspace\si1-lab3\target\scala-2.10\classes\META-INF\persistence.xml)[0m

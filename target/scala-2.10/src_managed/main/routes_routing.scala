@@ -1,6 +1,6 @@
-// @SOURCE:C:/Users/Veruska/si1-lab2/conf/routes
-// @HASH:cbf097c38a5bac53d28790bbb38647150818d105
-// @DATE:Fri Jun 05 18:37:54 BRT 2015
+// @SOURCE:C:/Users/Veruska/workspace/si1-lab3/conf/routes
+// @HASH:ce532c7ed952a860b149a88c753b9a3ccc456c1d
+// @DATE:Mon Oct 26 22:18:28 BRST 2015
 
 
 import play.core._
@@ -51,7 +51,15 @@ private[this] lazy val controllers_Application_novoAnuncio4 = Route("POST", Path
 // @LINE:15
 private[this] lazy val controllers_Application_removeAnuncio5 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("books/removeAnuncio"))))
         
-def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """index""","""controllers.Application.anuncios()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """books""","""controllers.Application.anuncios()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """books""","""controllers.Application.novoAnuncio()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """books/removeAnuncio""","""controllers.Application.removeAnuncio(anuncio:Long, codigo:String, satisfeito:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+
+// @LINE:16
+private[this] lazy val controllers_Application_redirecionaRemoveAnuncio6 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("books/redirecionaRemoveAnuncio"))))
+        
+
+// @LINE:17
+private[this] lazy val controllers_Application_retornaBusca7 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("books/retornaBusca"))))
+        
+def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """index""","""controllers.Application.anuncios()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """books""","""controllers.Application.anuncios()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """books""","""controllers.Application.novoAnuncio()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """books/removeAnuncio""","""controllers.Application.removeAnuncio(anuncio:Long, codigo:String, satisfeito:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """books/redirecionaRemoveAnuncio""","""controllers.Application.redirecionaRemoveAnuncio()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """books/retornaBusca""","""controllers.Application.retornaBusca(palavra:String, interesse:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]] 
 }}
@@ -103,6 +111,22 @@ case controllers_Application_novoAnuncio4(params) => {
 case controllers_Application_removeAnuncio5(params) => {
    call(params.fromQuery[Long]("anuncio", None), params.fromQuery[String]("codigo", None), params.fromQuery[String]("satisfeito", None)) { (anuncio, codigo, satisfeito) =>
         invokeHandler(controllers.Application.removeAnuncio(anuncio, codigo, satisfeito), HandlerDef(this, "controllers.Application", "removeAnuncio", Seq(classOf[Long], classOf[String], classOf[String]),"GET", """""", Routes.prefix + """books/removeAnuncio"""))
+   }
+}
+        
+
+// @LINE:16
+case controllers_Application_redirecionaRemoveAnuncio6(params) => {
+   call { 
+        invokeHandler(controllers.Application.redirecionaRemoveAnuncio(), HandlerDef(this, "controllers.Application", "redirecionaRemoveAnuncio", Nil,"GET", """""", Routes.prefix + """books/redirecionaRemoveAnuncio"""))
+   }
+}
+        
+
+// @LINE:17
+case controllers_Application_retornaBusca7(params) => {
+   call(params.fromQuery[String]("palavra", None), params.fromQuery[String]("interesse", None)) { (palavra, interesse) =>
+        invokeHandler(controllers.Application.retornaBusca(palavra, interesse), HandlerDef(this, "controllers.Application", "retornaBusca", Seq(classOf[String], classOf[String]),"GET", """""", Routes.prefix + """books/retornaBusca"""))
    }
 }
         

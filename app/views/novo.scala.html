@@ -15,7 +15,7 @@
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/violao.jpg")">
         <script src="@routes.Assets.at("javascripts/jquery-1.9.0.min.js")" type="text/javascript"></script>
         
-        <h1> Bem vindo ao Club Music </h1>
+        <h1> Bem vindo ao Club Music</h1>
         <!-- Bootstrap CSS -->
         <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
    </head>
@@ -85,25 +85,36 @@
     <form action="@routes.Application.anuncios()">
     <input type="submit" class="btn btn-primary" value="Criar Novo Anúncio">
     </form>
+    
+    <form action="@routes.Application.redirecionaRemoveAnuncio()">
+    <input type="submit" class="btn btn-primary" value="Excluir Anúncio">
+    </form>
         </div>
         
         <div class="col-sm-3" align="center">
-        <h3>Deseja excluir algum anúncio?</h3>
+        <br><br><br><br>
+        <form action="/books/retornaBusca" method="get">
+        <label for="palavra"> Palavra-chave:</label>
+        <input type="input" name="palavra" class="form-control" required="required">
         
-        <form action="/books/removeAnuncio" method="get">
-        <label for="anuncio"> Selecione o anúncio</label>
-        <select name="anuncio" id="inputAnuncio" class="form-control multiselect" required="required">
-                     @for(anuncio <- anuncios) {
-                     <option value="@anuncio.getId()">@anuncio.getTitulo()</option>
+        <label for="instrumentos">Instrumento:</label>
+        <select name="instrumentos" id="inputInstrumento" class="form-control multiselect" required="required">
+                     @for(inst <- instr) {
+                     <option value="@inst.getId()">@inst.getNome()</option>
+               		}    
+       </select>
+             
+        <label for="estilosG">Estilo:</label>
+        <select name="estilosG" id="inputEstilo" class="form-control multiselect" required="required">
+                     @for(estilo <- estilo) {
+                     <option value="@estilo.getId()">@estilo.getNome()</option>
                		}
-             </select>
-        <label for="codigo">Digite o código do anúncio</label>
-        <input type="input" name="codigo" class="form-control" required="required">
+        </select>
         
-        <label for="satisfeito">Encontrou os parceiros que procurava?</label>
-        <input type="input" name="satisfeito" class="form-control" placeholder="Sim ou Não" required="required">
+        <label for="interesse">Interesse:</label>
+        <input type="input" name="interesse" class="form-control" placeholder="Formar banda ou Tocar por ocasião" required="required">
         
-        <input type="submit" class="btn btn-danger" value="Remover Anúncio">
+        <input type="submit" class="btn btn-danger" value="Buscar">
         </form>
         </div>
     </section>
