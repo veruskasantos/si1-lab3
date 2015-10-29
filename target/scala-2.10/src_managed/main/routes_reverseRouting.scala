@@ -1,6 +1,6 @@
 // @SOURCE:C:/Users/Veruska/workspace/si1-lab3/conf/routes
 // @HASH:717e096640adba4e91b9a42fc9169afac85469be
-// @DATE:Tue Oct 27 00:29:53 BRST 2015
+// @DATE:Wed Oct 28 23:58:35 BRST 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._

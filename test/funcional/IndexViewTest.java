@@ -60,7 +60,7 @@ public class IndexViewTest {
 		estilosNO.add(estiloN);
 		long contador = 0L;
 
-		// guarda o html resultante da renderização do index.scala.html
+		// guarda o html resultante da renderização do novo.scala.html
 		// com a lista de anuncios e o formulario
 		Content html = views.html.novo.render(anuncios, instrumentos, estilos, estilosNO, contador);
 		assertThat(contentType(html)).isEqualTo("text/html");
@@ -89,6 +89,10 @@ public class IndexViewTest {
 		
 		Content html = index.render(instrumentos, estilos, estilosNO);
 		assertThat(contentType(html)).isEqualTo("text/html");
+		// verifica se o html contém a determimnada string
+		assertThat(contentAsString(html)).contains("Cria um novo Anúncio");
+		assertThat(contentAsString(html)).contains("Criar");
+				
 	}
 
 }

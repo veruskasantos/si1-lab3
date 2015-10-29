@@ -1,137 +1,48 @@
-2015-10-27 00:29:33,076 - [INFO] - from play in pool-4-thread-2 
+2015-10-28 23:58:05,480 - [INFO] - from play in pool-4-thread-5 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2015-10-27 00:29:58,763 - [ERROR] - from application in New I/O worker #1 
-
-
-! @6o0fjf093 - Internal server error, for (GET) [/] ->
-
-play.PlayExceptions$CompilationException: Compilation error[not found: value anuncios]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.3.jar:na]
-	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.3.jar:2.2.3]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.3.jar:2.2.3]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.3.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.3.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.3.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.3.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.3.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.3.jar:na]
-
-2015-10-27 00:29:58,877 - [WARN] - from play in New I/O worker #1 
-No application found at invoker init
-
-2015-10-27 00:30:00,629 - [ERROR] - from application in New I/O worker #2 
-
-
-! @6o0fjf33i - Internal server error, for (GET) [/] ->
-
-play.PlayExceptions$CompilationException: Compilation error[not found: value anuncios]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.3.jar:na]
-	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.3.jar:2.2.3]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.3.jar:2.2.3]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.3.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.3.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.3.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.3.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.3.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.3.jar:na]
-
-2015-10-27 00:30:55,875 - [ERROR] - from application in New I/O worker #2 
-
-
-! @6o0fji6me - Internal server error, for (GET) [/] ->
-
-play.PlayExceptions$CompilationException: Compilation error[value map is not a member of models.Anuncio]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.3.jar:na]
-	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.3.jar:2.2.3]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.3.jar:2.2.3]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.3.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.3.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.3.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.3.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.3.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.3.jar:na]
-
-2015-10-27 00:30:56,984 - [ERROR] - from application in New I/O worker #3 
-
-
-! @6o0fji8d6 - Internal server error, for (GET) [/] ->
-
-play.PlayExceptions$CompilationException: Compilation error[value map is not a member of models.Anuncio]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.3.jar:na]
-	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.3.jar:2.2.3]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.3.jar:2.2.3]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.3.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.3.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.3.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.3.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.3.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.3.jar:na]
-
-2015-10-27 00:32:08,553 - [INFO] - from play in play-internal-execution-context-3 
+2015-10-28 23:59:04,534 - [INFO] - from play in play-internal-execution-context-1 
 datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
 
-2015-10-27 00:32:08,671 - [INFO] - from play in play-internal-execution-context-3 
+2015-10-28 23:59:04,939 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:h2:mem:play
 
-2015-10-27 00:32:09,664 - [INFO] - from application in play-internal-execution-context-3 
+2015-10-28 23:59:07,547 - [INFO] - from application in play-internal-execution-context-1 
 Aplicação inicializada...
 
-2015-10-27 00:32:09,826 - [INFO] - from play in play-internal-execution-context-3 
+2015-10-28 23:59:07,976 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-10-27 00:38:32,958 - [INFO] - from application in play-internal-execution-context-3 
+2015-10-28 23:59:32,604 - [INFO] - from application in pool-4-thread-5 
 Aplicação desligada...
 
-2015-10-27 00:38:33,049 - [INFO] - from play in play-internal-execution-context-3 
+2015-10-28 23:59:51,514 - [INFO] - from play in main 
 datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
 
-2015-10-27 00:38:33,050 - [INFO] - from play in play-internal-execution-context-3 
-database [default] connected at jdbc:h2:mem:play
+2015-10-28 23:59:53,635 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
 
-2015-10-27 00:38:33,173 - [INFO] - from application in play-internal-execution-context-3 
-Aplicação inicializada...
+2015-10-28 23:59:53,792 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
 
-2015-10-27 00:38:33,218 - [INFO] - from play in play-internal-execution-context-3 
-Application started (Dev)
+2015-10-28 23:59:54,011 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-10-28 23:59:54,167 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-10-28 23:59:54,292 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-10-28 23:59:54,432 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-10-28 23:59:54,526 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-10-28 23:59:54,636 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-10-28 23:59:55,008 - [DEBUG] - from application in play-akka.actor.default-dispatcher-8 
+Criando livro: {Anuncio=Banda} como null null null null null null null null 28/10/2015
 
