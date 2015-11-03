@@ -49,6 +49,11 @@ Seq[Any](format.raw/*1.44*/("""
    <body >
  
     <section id="telaRemoveAnuncio" >
+    <div>
+    <form action=""""),_display_(Seq[Any](/*25.20*/routes/*25.26*/.Application.index())),format.raw/*25.46*/("""">
+    <input type="submit" class="btn btn-primary" value="Club Music - Início">
+    </form>
+    </div>
     <div class="content" align="center">
 
 	<div class="col-sm-3" align="center">
@@ -57,9 +62,9 @@ Seq[Any](format.raw/*1.44*/("""
         <form action="/books/removeAnuncio" method="get">
         <label for="anuncio"> Selecione o anúncio</label>
         <select name="anuncio" id="inputAnuncio" class="form-control multiselect" required="required">
-                     """),_display_(Seq[Any](/*32.23*/for(anuncio <- anuncios) yield /*32.47*/ {_display_(Seq[Any](format.raw/*32.49*/("""
-                     <option value=""""),_display_(Seq[Any](/*33.38*/anuncio/*33.45*/.getId())),format.raw/*33.53*/("""">"""),_display_(Seq[Any](/*33.56*/anuncio/*33.63*/.getTitulo())),format.raw/*33.75*/("""</option>
-               		""")))})),format.raw/*34.19*/("""
+                     """),_display_(Seq[Any](/*37.23*/for(anuncio <- anuncios) yield /*37.47*/ {_display_(Seq[Any](format.raw/*37.49*/("""
+                     <option value=""""),_display_(Seq[Any](/*38.38*/anuncio/*38.45*/.getId())),format.raw/*38.53*/("""">"""),_display_(Seq[Any](/*38.56*/anuncio/*38.63*/.getTitulo())),format.raw/*38.75*/("""</option>
+               		""")))})),format.raw/*39.19*/("""
              </select>
         <label for="codigo">Digite o código do anúncio</label>
         <input type="input" name="codigo" class="form-control" required="required">
@@ -86,11 +91,11 @@ Seq[Any](format.raw/*1.44*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Wed Oct 28 23:58:45 BRST 2015
+                    DATE: Mon Nov 02 23:32:26 BRST 2015
                     SOURCE: C:/Users/Veruska/workspace/si1-lab3/app/views/removeAnuncio.scala.html
-                    HASH: 2a4af2ceb7769c17014cb341d998877e0a6fdc19
-                    MATRIX: 794->1|930->43|1365->442|1380->448|1436->482|1534->544|1549->550|1602->581|1664->607|1679->613|1746->658|2441->1317|2481->1341|2521->1343|2596->1382|2612->1389|2642->1397|2681->1400|2697->1407|2731->1419|2792->1448
-                    LINES: 26->1|29->1|41->13|41->13|41->13|42->14|42->14|42->14|43->15|43->15|43->15|60->32|60->32|60->32|61->33|61->33|61->33|61->33|61->33|61->33|62->34
+                    HASH: 8ccdd0ecab92dd33e2fe8b9db054ac3e44ac63f4
+                    MATRIX: 794->1|930->43|1365->442|1380->448|1436->482|1534->544|1549->550|1602->581|1664->607|1679->613|1746->658|2085->961|2100->967|2142->987|2672->1481|2712->1505|2752->1507|2827->1546|2843->1553|2873->1561|2912->1564|2928->1571|2962->1583|3023->1612
+                    LINES: 26->1|29->1|41->13|41->13|41->13|42->14|42->14|42->14|43->15|43->15|43->15|53->25|53->25|53->25|65->37|65->37|65->37|66->38|66->38|66->38|66->38|66->38|66->38|67->39
                     -- GENERATED --
                 */
             

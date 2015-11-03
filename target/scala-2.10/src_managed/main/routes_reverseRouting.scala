@@ -1,6 +1,6 @@
 // @SOURCE:C:/Users/Veruska/workspace/si1-lab3/conf/routes
-// @HASH:717e096640adba4e91b9a42fc9169afac85469be
-// @DATE:Wed Oct 28 23:58:35 BRST 2015
+// @HASH:d92566bcba1db7881e9d760725bc170ab33c9d5c
+// @DATE:Mon Nov 02 22:16:05 BRST 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -13,6 +13,9 @@ import play.libs.F
 import Router.queryString
 
 
+// @LINE:20
+// @LINE:19
+// @LINE:18
 // @LINE:17
 // @LINE:16
 // @LINE:15
@@ -36,6 +39,9 @@ def at(file:String): Call = {
 }
                           
 
+// @LINE:20
+// @LINE:19
+// @LINE:18
 // @LINE:17
 // @LINE:16
 // @LINE:15
@@ -45,6 +51,12 @@ def at(file:String): Call = {
 // @LINE:6
 class ReverseApplication {
     
+
+// @LINE:19
+def redirecionaComentarios(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "books/redirecionaComentario")
+}
+                                                
 
 // @LINE:16
 def redirecionaRemoveAnuncio(): Call = {
@@ -72,6 +84,12 @@ def novoAnuncio(): Call = {
 }
                                                 
 
+// @LINE:20
+def responderComentario(anuncio:Long, codigo:String, comentario:Long, resposta:String): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "comentario/responderComentario" + queryString(List(Some(implicitly[QueryStringBindable[Long]].unbind("anuncio", anuncio)), Some(implicitly[QueryStringBindable[String]].unbind("codigo", codigo)), Some(implicitly[QueryStringBindable[Long]].unbind("comentario", comentario)), Some(implicitly[QueryStringBindable[String]].unbind("resposta", resposta)))))
+}
+                                                
+
 // @LINE:15
 def removeAnuncio(anuncio:Long, codigo:String, satisfeito:String): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "books/removeAnuncio" + queryString(List(Some(implicitly[QueryStringBindable[Long]].unbind("anuncio", anuncio)), Some(implicitly[QueryStringBindable[String]].unbind("codigo", codigo)), Some(implicitly[QueryStringBindable[String]].unbind("satisfeito", satisfeito)))))
@@ -81,6 +99,12 @@ def removeAnuncio(anuncio:Long, codigo:String, satisfeito:String): Call = {
 // @LINE:6
 def index(): Call = {
    Call("GET", _prefix)
+}
+                                                
+
+// @LINE:18
+def fazerPergunta(anuncio:Long, pergunta:String): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "comentario/fazerPergunta" + queryString(List(Some(implicitly[QueryStringBindable[Long]].unbind("anuncio", anuncio)), Some(implicitly[QueryStringBindable[String]].unbind("pergunta", pergunta)))))
 }
                                                 
 
@@ -96,6 +120,9 @@ def retornaBusca(palavra:String, instrumentos:Long, estilosG:Long, interesse:Str
                   
 
 
+// @LINE:20
+// @LINE:19
+// @LINE:18
 // @LINE:17
 // @LINE:16
 // @LINE:15
@@ -124,6 +151,9 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:20
+// @LINE:19
+// @LINE:18
 // @LINE:17
 // @LINE:16
 // @LINE:15
@@ -133,6 +163,17 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 // @LINE:6
 class ReverseApplication {
     
+
+// @LINE:19
+def redirecionaComentarios : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.redirecionaComentarios",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "books/redirecionaComentario"})
+      }
+   """
+)
+                        
 
 // @LINE:16
 def redirecionaRemoveAnuncio : JavascriptReverseRoute = JavascriptReverseRoute(
@@ -173,6 +214,17 @@ def novoAnuncio : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
+// @LINE:20
+def responderComentario : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.responderComentario",
+   """
+      function(anuncio,codigo,comentario,resposta) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "comentario/responderComentario" + _qS([(""" + implicitly[QueryStringBindable[Long]].javascriptUnbind + """)("anuncio", anuncio), (""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("codigo", codigo), (""" + implicitly[QueryStringBindable[Long]].javascriptUnbind + """)("comentario", comentario), (""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("resposta", resposta)])})
+      }
+   """
+)
+                        
+
 // @LINE:15
 def removeAnuncio : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.removeAnuncio",
@@ -195,6 +247,17 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
+// @LINE:18
+def fazerPergunta : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.fazerPergunta",
+   """
+      function(anuncio,pergunta) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "comentario/fazerPergunta" + _qS([(""" + implicitly[QueryStringBindable[Long]].javascriptUnbind + """)("anuncio", anuncio), (""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("pergunta", pergunta)])})
+      }
+   """
+)
+                        
+
 // @LINE:17
 def retornaBusca : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.retornaBusca",
@@ -212,6 +275,9 @@ def retornaBusca : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
+// @LINE:20
+// @LINE:19
+// @LINE:18
 // @LINE:17
 // @LINE:16
 // @LINE:15
@@ -236,6 +302,9 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
                           
 
+// @LINE:20
+// @LINE:19
+// @LINE:18
 // @LINE:17
 // @LINE:16
 // @LINE:15
@@ -245,6 +314,12 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 // @LINE:6
 class ReverseApplication {
     
+
+// @LINE:19
+def redirecionaComentarios(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.redirecionaComentarios(), HandlerDef(this, "controllers.Application", "redirecionaComentarios", Seq(), "GET", """""", _prefix + """books/redirecionaComentario""")
+)
+                      
 
 // @LINE:16
 def redirecionaRemoveAnuncio(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
@@ -264,6 +339,12 @@ def novoAnuncio(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 )
                       
 
+// @LINE:20
+def responderComentario(anuncio:Long, codigo:String, comentario:Long, resposta:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.responderComentario(anuncio, codigo, comentario, resposta), HandlerDef(this, "controllers.Application", "responderComentario", Seq(classOf[Long], classOf[String], classOf[Long], classOf[String]), "GET", """""", _prefix + """comentario/responderComentario""")
+)
+                      
+
 // @LINE:15
 def removeAnuncio(anuncio:Long, codigo:String, satisfeito:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.removeAnuncio(anuncio, codigo, satisfeito), HandlerDef(this, "controllers.Application", "removeAnuncio", Seq(classOf[Long], classOf[String], classOf[String]), "GET", """""", _prefix + """books/removeAnuncio""")
@@ -273,6 +354,12 @@ def removeAnuncio(anuncio:Long, codigo:String, satisfeito:String): play.api.mvc.
 // @LINE:6
 def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.index(), HandlerDef(this, "controllers.Application", "index", Seq(), "GET", """ Home page""", _prefix + """""")
+)
+                      
+
+// @LINE:18
+def fazerPergunta(anuncio:Long, pergunta:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.fazerPergunta(anuncio, pergunta), HandlerDef(this, "controllers.Application", "fazerPergunta", Seq(classOf[Long], classOf[String]), "GET", """""", _prefix + """comentario/fazerPergunta""")
 )
                       
 

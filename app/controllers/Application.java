@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import models.Anuncio;
+import models.Comentario;
 import models.Estilo;
 import models.EstiloNO;
 import models.Instrumento;
@@ -83,10 +84,12 @@ public class Application extends Controller {
             novoAnuncio.addListEstiloGosta(getEstilosSelecionados());
             novoAnuncio.addListEstiloNaoGosta(getEstilosNGSelecionados());
             
-            Logger.debug("Criando livro: " + filledForm.data().toString() + " como " + novoAnuncio.getTitulo()
-            		+ " " + novoAnuncio.getDescricao() + " " + novoAnuncio.getCidade() + " " + novoAnuncio.getBairro()
-            		+ " " + novoAnuncio.getEmail() + " " + novoAnuncio.getFacebook() + " " + novoAnuncio.getBanda()
-            		+ " " + novoAnuncio.getTocar() + " " + novoAnuncio.getDataFormatada());
+            Logger.debug("Criando livro: " + filledForm.data().toString() + " como " +
+            novoAnuncio.getTitulo() + " " + novoAnuncio.getDescricao() + " " + 
+            		novoAnuncio.getCidade() + " " + novoAnuncio.getBairro() + " " + 
+            novoAnuncio.getEmail() + " " + novoAnuncio.getFacebook() + " " + 
+            		novoAnuncio.getBanda() + " " + novoAnuncio.getTocar() + " " + 
+            novoAnuncio.getDataFormatada());
            
 			
 			dao.persist(novoAnuncio);
@@ -109,7 +112,8 @@ public class Application extends Controller {
 			List<String> idInstrumentos = Arrays.asList(recuperaInstrumentos);
 			for(String id : idInstrumentos){
 				Long idInstrumento = Long.parseLong(id);
-				Instrumento instrumento = dao.findByEntityId(Instrumento.class, idInstrumento);
+				Instrumento instrumento = dao.findByEntityId(Instrumento.class,
+						idInstrumento);
 				if(instrumento != null) {
 					instrumentos.add(instrumento);
 				}
@@ -240,7 +244,46 @@ public class Application extends Controller {
 			}
 			
 			//atualiza a página inicial
-		return ok(views.html.novo.render(anunciosSelect, instrumentos, estilos, estilosNG, satisfacao));
+		return ok(views.html.novo.render(anunciosSelect, instrumentos, estilos,
+				estilosNG, satisfacao));
+	}
+	
+	@Transactional
+	public static Result redirecionaComentarios(){
+		List<Anuncio> result = dao.findAllByClass(Anuncio.class);
+		
+		return ok(views.html.comentario.render(result));
+	}
+	
+	@Transactional
+	public static Result fazerPergunta(Long idAnuncio, String pergunta){
+	
+		Anuncio anuncio = dao.findByEntityId(Anuncio.class, idAnuncio);
+		if(anuncio != null){
+			Comentario comentario = new Comentario(pergunta);
+			anuncio.addComentario(comentario);
+			comentario.addAnuncio(anuncio);
+			dao.persist(comentario);
+			dao.persist(anuncio);
+			dao.flush();
+		}
+		
+		return redirecionaComentarios();
 	}
 
+	@Transactional
+	public static Result responderComentario(Long idAnuncio, String codigo, 
+			Long idComentario, String resposta){
+		
+		Anuncio anuncio = dao.findByEntityId(Anuncio.class, idAnuncio);
+		Comentario comentario = dao.findByEntityId(Comentario.class, idComentario);
+		if(anuncio != null && comentario != null){
+			comentario.addResposta(resposta, codigo);
+			
+		}
+		
+		return redirecionaComentarios();
+	}
+	
+	
 }

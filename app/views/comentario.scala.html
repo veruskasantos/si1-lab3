@@ -1,0 +1,116 @@
+@(anuncios: List[Anuncio])
+
+<!DOCTYPE: html>
+<html lang="pt-br">
+
+	<head>
+        <title id="titulo"> Club Music </title>
+        <meta charset="UTF-8">
+        <meta name=description content="">
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/violao.jpg")">
+        <script src="@routes.Assets.at("javascripts/jquery-1.9.0.min.js")" type="text/javascript"></script>
+        
+        <!-- Bootstrap CSS -->
+        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+   </head>
+   
+   <body >
+ 
+    <section id="telaComentario" >
+    <div>
+    <form action="@routes.Application.index()">
+    <input type="submit" class="btn btn-primary" value="Club Music - Início">
+    </form>
+    </div>
+    <div class="content" align="center">
+
+	<div class="col-sm-9" align="center">
+    	<h2>Seção de perguntas e respostas</h2>
+            <div class="table-responsive" align="center">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Título do Anúncio </th>
+                            <th>Pergunta</th>
+                            <th>Resposta</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @for(anuncio <- anuncios) {
+                        <tr>
+                            <td>@anuncio.getTitulo()</td>
+                            <td> 
+                                @for(coment <- anuncio.getComentarios()) {
+                                    <p> @coment.getDescricao()</p>
+                                }
+                            </td>
+                            <td>
+                            	@for(resposta <- anuncio.getComentarios()) {
+                                    <p> @resposta.getResposta()</p>
+                            }
+                            </td>
+                           
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+    </div>
+
+	<div class="col-sm-3" align="center">
+        <h3>Deseja fazer uma pergunta?</h3>
+        
+        <form action="/comentario/fazerPergunta" method="get">
+        <label for="anuncio"> Selecione o anúncio</label>
+        <select name="anuncio" id="inputAnuncio" class="form-control multiselect" required="required">
+                     @for(anuncio <- anuncios) {
+                     <option value="@anuncio.getId()">@anuncio.getTitulo()</option>
+               		}
+             </select>
+        <label for="pergunta">Digite a pergunta</label>
+        <input type="input" name="pergunta" class="form-control" required="required">
+        
+        <input type="submit" class="btn btn-danger" value="Adicionar Comentário">
+        </form>
+        
+        </div>
+        
+        <div class="col-sm-3" align="center">
+        <h3>Deseja responder uma pergunta do seu anúncio?</h3>
+        
+        <form action="/comentario/responderComentario" method="get">
+        <label for="anuncio"> Selecione o anúncio</label>
+        <select name="anuncio" id="inputAnuncio" class="form-control multiselect" required="required">
+                     @for(anuncio <- anuncios) {
+                     <option value="@anuncio.getId()">@anuncio.getTitulo()</option>
+               		}
+        </select>
+        <label for="codigo">Digite o código do anúncio</label>
+        <input type="input" name="codigo" class="form-control" required="required">
+        
+        <label for="comentario"> Selecione a pergunta</label>
+        <select name="comentario" id="inputComentario" class="form-control multiselect" required="required">
+                     @for(anuncio <- anuncios) {
+                     	@for(coment <- anuncio.getComentarios()){
+                     	<option value="@coment.getId()">@coment.getDescricao()</option>
+               			}
+               		}
+        </select>
+        
+        <label for="resposta">Digite a resposta</label>
+        <input type="input" name="resposta" class="form-control" required="required">
+        
+        <input type="submit" class="btn btn-danger" value="Responder">
+        </form>
+        
+        </div>
+        
+        </div>
+        </section>
+        </body>
+</html>

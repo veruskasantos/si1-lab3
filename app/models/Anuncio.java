@@ -32,6 +32,9 @@ public class Anuncio {
 	    @ManyToMany(cascade  = CascadeType.ALL)
 	    private List<EstiloNO> estilosNaoGosta;
 
+	    @ManyToMany(cascade  = CascadeType.ALL)
+	    private List<Comentario> comentarios;
+	    
 		@Column
 		private String titulo;
 		
@@ -219,7 +222,23 @@ public class Anuncio {
 	        instrumentos = instrumento;
 	    }
 	    
-	    public void setId(long id) {
+	    public void addComentario(Comentario comentario) {
+	        comentarios.add(comentario);
+	    }
+	    
+	    public void addComentarios(List<Comentario> comentario) {
+	        comentarios = comentario;
+	    }
+	    
+	    public void addComentarios(Comentario... comentario) {
+	        comentarios = Arrays.asList(comentario);
+	    }
+	    
+	    public List<Comentario> getComentarios() {
+			return Collections.unmodifiableList(comentarios);
+		}
+
+		public void setId(long id) {
 	        this.id = id;
 	    }
 }

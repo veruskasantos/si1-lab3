@@ -1,6 +1,6 @@
 // @SOURCE:C:/Users/Veruska/workspace/si1-lab3/conf/routes
-// @HASH:717e096640adba4e91b9a42fc9169afac85469be
-// @DATE:Wed Oct 28 23:58:35 BRST 2015
+// @HASH:d92566bcba1db7881e9d760725bc170ab33c9d5c
+// @DATE:Mon Nov 02 22:16:05 BRST 2015
 
 package controllers;
 

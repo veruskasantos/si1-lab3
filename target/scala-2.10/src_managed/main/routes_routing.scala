@@ -1,6 +1,6 @@
 // @SOURCE:C:/Users/Veruska/workspace/si1-lab3/conf/routes
-// @HASH:717e096640adba4e91b9a42fc9169afac85469be
-// @DATE:Wed Oct 28 23:58:35 BRST 2015
+// @HASH:d92566bcba1db7881e9d760725bc170ab33c9d5c
+// @DATE:Mon Nov 02 22:16:05 BRST 2015
 
 
 import play.core._
@@ -59,7 +59,19 @@ private[this] lazy val controllers_Application_redirecionaRemoveAnuncio6 = Route
 // @LINE:17
 private[this] lazy val controllers_Application_retornaBusca7 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("books/retornaBusca"))))
         
-def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """index""","""controllers.Application.anuncios()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """books""","""controllers.Application.anuncios()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """books""","""controllers.Application.novoAnuncio()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """books/removeAnuncio""","""controllers.Application.removeAnuncio(anuncio:Long, codigo:String, satisfeito:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """books/redirecionaRemoveAnuncio""","""controllers.Application.redirecionaRemoveAnuncio()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """books/retornaBusca""","""controllers.Application.retornaBusca(palavra:String, instrumentos:Long, estilosG:Long, interesse:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+
+// @LINE:18
+private[this] lazy val controllers_Application_fazerPergunta8 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("comentario/fazerPergunta"))))
+        
+
+// @LINE:19
+private[this] lazy val controllers_Application_redirecionaComentarios9 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("books/redirecionaComentario"))))
+        
+
+// @LINE:20
+private[this] lazy val controllers_Application_responderComentario10 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("comentario/responderComentario"))))
+        
+def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """index""","""controllers.Application.anuncios()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """books""","""controllers.Application.anuncios()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """books""","""controllers.Application.novoAnuncio()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """books/removeAnuncio""","""controllers.Application.removeAnuncio(anuncio:Long, codigo:String, satisfeito:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """books/redirecionaRemoveAnuncio""","""controllers.Application.redirecionaRemoveAnuncio()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """books/retornaBusca""","""controllers.Application.retornaBusca(palavra:String, instrumentos:Long, estilosG:Long, interesse:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """comentario/fazerPergunta""","""controllers.Application.fazerPergunta(anuncio:Long, pergunta:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """books/redirecionaComentario""","""controllers.Application.redirecionaComentarios()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """comentario/responderComentario""","""controllers.Application.responderComentario(anuncio:Long, codigo:String, comentario:Long, resposta:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]] 
 }}
@@ -127,6 +139,30 @@ case controllers_Application_redirecionaRemoveAnuncio6(params) => {
 case controllers_Application_retornaBusca7(params) => {
    call(params.fromQuery[String]("palavra", None), params.fromQuery[Long]("instrumentos", None), params.fromQuery[Long]("estilosG", None), params.fromQuery[String]("interesse", None)) { (palavra, instrumentos, estilosG, interesse) =>
         invokeHandler(controllers.Application.retornaBusca(palavra, instrumentos, estilosG, interesse), HandlerDef(this, "controllers.Application", "retornaBusca", Seq(classOf[String], classOf[Long], classOf[Long], classOf[String]),"GET", """""", Routes.prefix + """books/retornaBusca"""))
+   }
+}
+        
+
+// @LINE:18
+case controllers_Application_fazerPergunta8(params) => {
+   call(params.fromQuery[Long]("anuncio", None), params.fromQuery[String]("pergunta", None)) { (anuncio, pergunta) =>
+        invokeHandler(controllers.Application.fazerPergunta(anuncio, pergunta), HandlerDef(this, "controllers.Application", "fazerPergunta", Seq(classOf[Long], classOf[String]),"GET", """""", Routes.prefix + """comentario/fazerPergunta"""))
+   }
+}
+        
+
+// @LINE:19
+case controllers_Application_redirecionaComentarios9(params) => {
+   call { 
+        invokeHandler(controllers.Application.redirecionaComentarios(), HandlerDef(this, "controllers.Application", "redirecionaComentarios", Nil,"GET", """""", Routes.prefix + """books/redirecionaComentario"""))
+   }
+}
+        
+
+// @LINE:20
+case controllers_Application_responderComentario10(params) => {
+   call(params.fromQuery[Long]("anuncio", None), params.fromQuery[String]("codigo", None), params.fromQuery[Long]("comentario", None), params.fromQuery[String]("resposta", None)) { (anuncio, codigo, comentario, resposta) =>
+        invokeHandler(controllers.Application.responderComentario(anuncio, codigo, comentario, resposta), HandlerDef(this, "controllers.Application", "responderComentario", Seq(classOf[Long], classOf[String], classOf[Long], classOf[String]),"GET", """""", Routes.prefix + """comentario/responderComentario"""))
    }
 }
         

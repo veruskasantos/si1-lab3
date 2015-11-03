@@ -1,48 +1,18 @@
-2015-10-28 23:58:05,480 - [INFO] - from play in pool-4-thread-5 
+2015-11-03 00:05:47,523 - [INFO] - from play in pool-4-thread-1 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2015-10-28 23:59:04,534 - [INFO] - from play in play-internal-execution-context-1 
+2015-11-03 00:05:50,690 - [INFO] - from play in play-internal-execution-context-1 
 datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
 
-2015-10-28 23:59:04,939 - [INFO] - from play in play-internal-execution-context-1 
+2015-11-03 00:05:50,802 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:h2:mem:play
 
-2015-10-28 23:59:07,547 - [INFO] - from application in play-internal-execution-context-1 
+2015-11-03 00:05:51,822 - [INFO] - from application in play-internal-execution-context-1 
 Aplicação inicializada...
 
-2015-10-28 23:59:07,976 - [INFO] - from play in play-internal-execution-context-1 
+2015-11-03 00:05:52,087 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-10-28 23:59:32,604 - [INFO] - from application in pool-4-thread-5 
-Aplicação desligada...
-
-2015-10-28 23:59:51,514 - [INFO] - from play in main 
-datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
-
-2015-10-28 23:59:53,635 - [INFO] - from play in main 
-datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
-
-2015-10-28 23:59:53,792 - [INFO] - from play in main 
-datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
-
-2015-10-28 23:59:54,011 - [INFO] - from play in main 
-datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
-
-2015-10-28 23:59:54,167 - [INFO] - from play in main 
-datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
-
-2015-10-28 23:59:54,292 - [INFO] - from play in main 
-datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
-
-2015-10-28 23:59:54,432 - [INFO] - from play in main 
-datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
-
-2015-10-28 23:59:54,526 - [INFO] - from play in main 
-datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
-
-2015-10-28 23:59:54,636 - [INFO] - from play in main 
-datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
-
-2015-10-28 23:59:55,008 - [DEBUG] - from application in play-akka.actor.default-dispatcher-8 
-Criando livro: {Anuncio=Banda} como null null null null null null null null 28/10/2015
+2015-11-03 00:09:30,635 - [DEBUG] - from application in play-akka.actor.default-dispatcher-4 
+Criando livro: {codigo=o, cidade=o, bairro=o, facebook=o, titulo=o, estilosNG=1, instrumentos=1, tocar=o, descricao=o, estilosG=3, email=o, banda=o} como o o o o o o o o 3/11/2015
 

@@ -3,13 +3,12 @@
 <!DOCTYPE: html>
 <html lang="pt-br">
 
-<head>
+	<head>
         <title id="titulo"> Club Music </title>
         <meta charset="UTF-8">
         <meta name=description content="">
         <meta name=viewport content="width=device-width, initial-scale=1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
         
         <link rel="stylesheet" type="text/css" href="@routes.Assets.at("stylesheets/main.css")">
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/violao.jpg")">
@@ -20,8 +19,7 @@
         <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
    </head>
    
-   <body >
-
+   <body>
     <section id="telaInicial" >
     <div class="content" align="center">
     <h3>Site para formar bandas musicais ou encontrar parceiros para tocar casualmente.</h3>
@@ -80,15 +78,28 @@
                     </tbody>
                 </table>
             </div>
+            
             <h3 class="text-center">@contador anúncio(s) já ajudaram as pessoas</h3>
+            
+    <div class="col-sm-3" align="center">
     <form action="@routes.Application.anuncios()">
     <input type="submit" class="btn btn-primary" value="Criar Novo Anúncio">
     </form>
+    </div>
     
+    <div class="col-sm-3" align="center">
     <form action="@routes.Application.redirecionaRemoveAnuncio()">
     <input type="submit" class="btn btn-primary" value="Excluir Anúncio">
     </form>
-        </div>
+    </div>
+    
+    <div class="col-sm-3" align="center">
+    <form action="@routes.Application.redirecionaComentarios()">
+    <input type="submit" class="btn btn-primary" value="Comentários">
+    </form>
+    </div>
+    <!-- a href="comentarios.scala.html">Ir para os comentários</a-->
+    </div>
         
         <div class="col-sm-3" align="center">
         <br><br><br><br>
