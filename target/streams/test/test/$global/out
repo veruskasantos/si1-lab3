@@ -1,0 +1,43 @@
+[0m[[0mdebug[0m] [0m[34mTest run started[0m[0m
+[0m[[0mdebug[0m] [0mTest funcional.[33mIndexRouteTest[0m.[36mrootRoute[0m started[0m
+[0m[[0mdebug[0m] [0mTest funcional.[33mIndexRouteTest[0m.[36mrootRoute[0m finished[0m
+[0m[[0mdebug[0m] [0mTest funcional.[33mIndexRouteTest[0m.[36mbadRoute[0m started[0m
+[0m[[0mdebug[0m] [0mTest funcional.[33mIndexRouteTest[0m.[36mbadRoute[0m finished[0m
+[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 2 total, 8.864s[0m[0m
+[0m[[0mdebug[0m] [0m[34mTest run started[0m[0m
+[0m[[0mdebug[0m] [0mTest unidade.[33mAnuncioTest[0m.[36mdeveSalvarAnuncioSemInstrumento[0m started[0m
+[0m[[0mdebug[0m] [0mTest unidade.[33mAnuncioTest[0m.[36mdeveSalvarAnuncioSemInstrumento[0m finished[0m
+[0m[[0mdebug[0m] [0mTest unidade.[33mAnuncioTest[0m.[36mdeveSalvarAnuncioComInstrumento[0m started[0m
+[0m[[0mdebug[0m] [0mTest unidade.[33mAnuncioTest[0m.[36mdeveSalvarAnuncioComInstrumento[0m finished[0m
+[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 2 total, 1.047s[0m[0m
+[0m[[0mdebug[0m] [0m[34mTest run started[0m[0m
+[0m[[0mdebug[0m] [0mTest funcional.[33mApplicationControllerTest[0m.[36mcallRedirecionaComentarios[0m started[0m
+[0m[[0mdebug[0m] [0mTest funcional.[33mApplicationControllerTest[0m.[36mcallRedirecionaComentarios[0m finished[0m
+[0m[[0mdebug[0m] [0mTest funcional.[33mApplicationControllerTest[0m.[36mcallIndex[0m started[0m
+[0m[[0mdebug[0m] [0mTest funcional.[33mApplicationControllerTest[0m.[36mcallIndex[0m finished[0m
+[0m[[0mdebug[0m] [0mTest funcional.[33mApplicationControllerTest[0m.[36mcallAnuncios[0m started[0m
+[0m[[0mdebug[0m] [0mTest funcional.[33mApplicationControllerTest[0m.[36mcallAnuncios[0m finished[0m
+[0m[[0mdebug[0m] [0mTest funcional.[33mApplicationControllerTest[0m.[36mcallRemoveAnuncio[0m started[0m
+[0m[[0mdebug[0m] [0mTest funcional.[33mApplicationControllerTest[0m.[36mcallRemoveAnuncio[0m finished[0m
+[0m[[0mdebug[0m] [0mTest funcional.[33mApplicationControllerTest[0m.[36mcallNewAnuncio[0m started[0m
+[0m[[0mdebug[0m] [0mTest funcional.[33mApplicationControllerTest[0m.[36mcallNewAnuncio[0m finished[0m
+[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 5 total, 1.875s[0m[0m
+[0m[[0mdebug[0m] [0m[34mTest run started[0m[0m
+[0m[[0mdebug[0m] [0mTest funcional.[33mIndexViewTest[0m.[36mindexTemplate[0m started[0m
+[0m[[0mdebug[0m] [0mTest funcional.[33mIndexViewTest[0m.[36mindexTemplate[0m finished[0m
+[0m[[0mdebug[0m] [0mTest funcional.[33mIndexViewTest[0m.[36mremoveAnuncioTemplate[0m started[0m
+[0m[[0mdebug[0m] [0mTest funcional.[33mIndexViewTest[0m.[36mremoveAnuncioTemplate[0m finished[0m
+[0m[[0mdebug[0m] [0mTest funcional.[33mIndexViewTest[0m.[36mcomentarioTemplate[0m started[0m
+[0m[[0mdebug[0m] [0mTest funcional.[33mIndexViewTest[0m.[36mcomentarioTemplate[0m finished[0m
+[0m[[0mdebug[0m] [0mTest funcional.[33mIndexViewTest[0m.[36mnovoTemplate[0m started[0m
+[0m[[0mdebug[0m] [0mTest funcional.[33mIndexViewTest[0m.[36mnovoTemplate[0m finished[0m
+[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 4 total, 0.031s[0m[0m
+[0m[[0mdebug[0m] [0mFramework implementation 'org.specs2.runner.Specs2Framework' not present.[0m
+[0m[[0mdebug[0m] [0mSummary for JUnit not available.[0m
+[0m[[0mdebug[0m] [0mSummary for specs2 not available.[0m
+[0m[[0minfo[0m] [0mPassed: Total 13, Failed 0, Errors 0, Passed 13[0m
+[0m[[0mdebug[0m] [0mPassed tests:[0m
+[0m[[0mdebug[0m] [0m	funcional.ApplicationControllerTest[0m
+[0m[[0mdebug[0m] [0m	unidade.AnuncioTest[0m
+[0m[[0mdebug[0m] [0m	funcional.IndexViewTest[0m
+[0m[[0mdebug[0m] [0m	funcional.IndexRouteTest[0m

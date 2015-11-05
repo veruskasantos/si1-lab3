@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import models.Anuncio;
+import models.Comentario;
 import models.Estilo;
 import models.EstiloNO;
 import models.Instrumento;
@@ -25,15 +26,19 @@ public class IndexViewTest {
 	List<Instrumento> instrumentos; 
 	List<Estilo> estilos; 
 	List<EstiloNO> estilosNO;
+	List<Comentario> comentarios;
 	EstiloNO estiloN;
 	Estilo estilo1;
 	Instrumento instrumento1; 
 	Anuncio anuncio1;
+	Comentario comentario;
+	Long contador;
 
 	@Before
 	public void iniciaVariaveis() {
 		anuncios = new ArrayList<Anuncio>();
-		anuncio1 = new Anuncio("tit", "des", "cid", "bai", "em", "fac", "ban", "toc", "seg" );
+		anuncio1 = new Anuncio("tit", "des", "cid", "bai", "em", "fac", "ban", "toc",
+				"seg" );
         anuncio1.setId(1L);
         
         instrumentos = new ArrayList<Instrumento>();
@@ -48,21 +53,28 @@ public class IndexViewTest {
         estiloN = new EstiloNO("Forró");
         estiloN.setId(1L);
         
+        comentarios = new ArrayList<Comentario>();
+        comentario = new Comentario("coment");
+        comentario.setId(1L);
+        
+        contador = 0L;
+        
+        anuncios.add(anuncio1);
+        
 	}
 
 	// Testa o template novo.scala.html
 	@Test
 	public void novoTemplate() {
 		
-		anuncios.add(anuncio1);
 		instrumentos.add(instrumento1);
 		estilos.add(estilo1);
 		estilosNO.add(estiloN);
-		long contador = 0L;
 
 		// guarda o html resultante da renderização do novo.scala.html
 		// com a lista de anuncios e o formulario
-		Content html = views.html.novo.render(anuncios, instrumentos, estilos, estilosNO, contador);
+		Content html = views.html.novo.render(anuncios, instrumentos, estilos, 
+				estilosNO, contador);
 		assertThat(contentType(html)).isEqualTo("text/html");
 		// verifica se o html contém a determimnada string
 		assertThat(contentAsString(html)).contains(anuncio1.getTitulo());
@@ -82,7 +94,6 @@ public class IndexViewTest {
 	@Test
 	public void indexTemplate(){
 		
-		anuncios.add(anuncio1);
 		instrumentos.add(instrumento1);
 		estilos.add(estilo1);
 		estilosNO.add(estiloN);
@@ -94,5 +105,32 @@ public class IndexViewTest {
 		assertThat(contentAsString(html)).contains("Criar");
 				
 	}
-
+	
+	// Testa o template comentario.scala.html
+	@Test
+	public void comentarioTemplate(){
+			
+		anuncio1.addComentario(comentario);
+		
+		Content html = views.html.comentario.render(anuncios);
+		assertThat(contentType(html)).isEqualTo("text/html");
+		assertThat(contentAsString(html)).contains("Seção de perguntas e "
+					+ "respostas");
+		assertThat(contentAsString(html)).contains("Deseja fazer uma pergunta?");
+		assertThat(contentAsString(html)).contains("Deseja responder uma pergunta"
+					+ " do seu anúncio?");
+		assertThat(contentAsString(html)).contains(anuncio1.getComentarios().get(0).getDescricao());
+					
+	}
+	
+	// Testa o template removeAnuncio.scala.html
+	@Test
+	public void removeAnuncioTemplate(){
+		
+		Content html = views.html.removeAnuncio.render(anuncios, contador);
+		assertThat(contentType(html)).isEqualTo("text/html");
+		assertThat(contentAsString(html)).contains("Deseja excluir algum anúncio?");
+		assertThat(contentAsString(html)).contains("Remover Anúncio");
+				
+	}
 }

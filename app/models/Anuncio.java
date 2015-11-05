@@ -61,6 +61,7 @@ public class Anuncio {
 			this.instrumentos = new ArrayList<Instrumento>();
 			this.estilosGosta = new ArrayList<Estilo>();
 			this.estilosNaoGosta = new ArrayList<EstiloNO>();
+			this.comentarios = new ArrayList<Comentario>();
 			this.data = LocalDate.now();
 		}
 

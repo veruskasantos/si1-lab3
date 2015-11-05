@@ -71,7 +71,7 @@ public class Application extends Controller {
 		Form<Anuncio> filledForm = anuncioForm.bindFromRequest();
 
 		if (filledForm.hasErrors()) {
-            //List<Anuncio> result = dao.findAllByClass(Anuncio.class);
+            
             List<Instrumento> result1 = dao.findAllByClass(Instrumento.class);
             List<Estilo> result2 = dao.findAllByClass(Estilo.class); 
             List<EstiloNO> result3 = dao.findAllByClass(EstiloNO.class);

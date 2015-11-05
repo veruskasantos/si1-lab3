@@ -16,3 +16,339 @@ Application started (Dev)
 2015-11-03 00:09:30,635 - [DEBUG] - from application in play-akka.actor.default-dispatcher-4 
 Criando livro: {codigo=o, cidade=o, bairro=o, facebook=o, titulo=o, estilosNG=1, instrumentos=1, tocar=o, descricao=o, estilosG=3, email=o, banda=o} como o o o o o o o o 3/11/2015
 
+2015-11-03 00:30:45,266 - [INFO] - from application in pool-4-thread-1 
+Aplicação desligada...
+
+2015-11-04 22:44:09,666 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:44:19,478 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:44:20,056 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:44:20,775 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:44:21,181 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:44:21,541 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:44:21,963 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:44:22,296 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:44:22,671 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:44:23,215 - [DEBUG] - from application in play-akka.actor.default-dispatcher-2 
+Criando livro: {Anuncio=Banda} como null null null null null null null null 4/11/2015
+
+2015-11-04 22:50:17,696 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:50:23,464 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:50:23,964 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:50:24,495 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:50:24,980 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:50:25,355 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:50:25,667 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:50:25,964 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:50:26,230 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:50:26,480 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:50:26,857 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
+Criando livro: {Anuncio=Banda} como null null null null null null null null 4/11/2015
+
+2015-11-04 22:55:27,009 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:55:33,065 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:55:33,550 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:55:34,112 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:55:34,586 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:55:34,961 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:55:35,321 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:55:35,633 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:55:35,899 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:55:36,258 - [DEBUG] - from application in play-akka.actor.default-dispatcher-2 
+Criando livro: {Anuncio=Banda} como null null null null null null null null 4/11/2015
+
+2015-11-04 22:56:37,263 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:56:43,257 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:56:43,757 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:56:44,366 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:56:44,804 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:56:45,210 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:56:45,569 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:56:45,866 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:56:46,179 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 22:56:46,601 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
+Criando livro: {Anuncio=Banda} como null null null null null null null null 4/11/2015
+
+2015-11-04 23:04:09,018 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:04:14,735 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:04:15,222 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:04:15,894 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:04:16,535 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:04:16,894 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:04:17,238 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:04:17,550 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:04:17,832 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:04:18,238 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
+Criando livro: {Anuncio=Banda} como null null null null null null null null 4/11/2015
+
+2015-11-04 23:12:44,462 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:12:50,168 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:12:50,587 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:12:51,181 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:12:51,603 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:12:51,962 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:12:52,244 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:12:52,572 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:12:52,822 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:12:53,197 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
+Criando livro: {Anuncio=Banda} como null null null null null null null null 4/11/2015
+
+2015-11-04 23:15:56,390 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:16:02,219 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:16:02,681 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:16:03,291 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:16:03,791 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:16:04,166 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:16:04,494 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:16:04,822 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:16:05,131 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:16:05,553 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
+Criando livro: {Anuncio=Banda} como null null null null null null null null 4/11/2015
+
+2015-11-04 23:22:54,030 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:23:00,453 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:23:00,942 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:23:01,510 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:23:01,963 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:23:02,322 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:23:02,697 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:23:03,010 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:23:03,260 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:23:03,666 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
+Criando livro: {Anuncio=Banda} como null null null null null null null null 4/11/2015
+
+2015-11-04 23:24:43,172 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:24:49,104 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:24:49,635 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:24:50,244 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:24:50,666 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:24:51,026 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:24:51,338 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:24:51,640 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:24:51,890 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:24:52,312 - [DEBUG] - from application in play-akka.actor.default-dispatcher-2 
+Criando livro: {Anuncio=Banda} como null null null null null null null null 4/11/2015
+
+2015-11-04 23:26:25,912 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:26:31,755 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:26:32,255 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:26:32,818 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:26:33,252 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:26:33,662 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:26:33,979 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:26:34,304 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:26:34,601 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:26:35,022 - [DEBUG] - from application in play-akka.actor.default-dispatcher-2 
+Criando livro: {Anuncio=Banda} como null null null null null null null null 4/11/2015
+
+2015-11-04 23:29:32,469 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:29:38,487 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:29:38,941 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:29:39,519 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:29:39,941 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:29:40,331 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:29:40,675 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:29:40,972 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:29:41,284 - [INFO] - from play in main 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2015-11-04 23:29:41,706 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
+Criando livro: {Anuncio=Banda} como null null null null null null null null 4/11/2015
+

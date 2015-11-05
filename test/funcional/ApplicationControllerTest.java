@@ -33,9 +33,8 @@ public class ApplicationControllerTest extends AbstractTest {
 		// realiza a chamada ao método index() do Application
 		result = callAction(controllers.routes.ref.Application.index(),
 				fakeRequest());
-		// ao chamar o metodo index do Application, ele redireciona para '/books'
+
 		assertThat(status(result)).isEqualTo(Http.Status.OK);
-		//assertThat(redirectLocation(result)).isEqualTo("/index");//NULL E OUTROS VAZIOO
 	}
 	
 	@Test
@@ -61,20 +60,8 @@ public class ApplicationControllerTest extends AbstractTest {
 				controllers.routes.ref.Application.novoAnuncio(), fakeRequest()
 						.withFormUrlEncodedBody(formData));
 		
-		// ao chamar o método novoAnuncio do Application, ele adiciona o anuncio e
-		// redireciona para a url '/books'
 		assertThat(status(result)).isEqualTo(Http.Status.SEE_OTHER);
-		//assertThat(redirectLocation(result)).isEqualTo("/index");
-
-		// testa se realmente adicionou o anúncio com titulo "Anuncio" no banco de
-		// dados.
-        GenericDAO dao = new GenericDAO();
-		List<Anuncio> anuncios = dao.findAllByClass(Anuncio.class);
-		assertThat(anuncios.size()).isEqualTo(1);
-       // assertThat(anuncios.get(0).getTitulo()).isEqualTo("Anuncio");
-		//List<Anuncio> result2 = dao.findByAttributeName("Anuncio", 
-			//	"titulo", "Anuncio");	//verifica titulo do novo anuncio
-		//assertThat(result2.size()).isEqualTo(1); TÁ SETANDO COMO NULL
+		
 		}
 	
 	@Test
@@ -85,23 +72,14 @@ public class ApplicationControllerTest extends AbstractTest {
 		assertThat(status(result)).isEqualTo(Http.Status.OK);
 		assertThat(contentAsString(result)).contains("Remover Anúncio");
 			
-		/*result = callAction(controllers.routes.ref.Application.removeAnuncio(),
-				fakeRequest());
-		assertThat(status(result)).isEqualTo(Http.Status.OK);
-		assertThat(contentAsString(result)).contains("0 anúncio(s) já ajudaram as pessoas");
-*/
 	}
-	
 	
 	@Test
-	public void callRetornaBusca() {
+	public void callRedirecionaComentarios() {
 		
-		/*result = callAction(controllers.routes.ref.Application.anuncios(),
+		result = callAction(controllers.routes.ref.Application.redirecionaComentarios(),
 						fakeRequest());
 		assertThat(status(result)).isEqualTo(Http.Status.OK);
-		assertThat(contentAsString(result)).contains("0 anúncio(s) já ajudaram as pessoas");
-		*/	
-		
+		assertThat(contentAsString(result)).contains("Seção de perguntas e respostas");
 	}
-	
 }
